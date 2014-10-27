@@ -1,0 +1,190 @@
+@mixin scrollable {
+    height: 200px;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    -webkit-overflow-scrolling : touch;
+}
+@mixin arrow($value: 45deg){
+    width: 6px;
+    height: 6px;
+    border-bottom: 1px solid #fff;
+    border-right:1px solid #fff;
+    -webkit-transform: rotate($value);
+}
+.navbar{
+    background: #61cba0;
+    position: relative;
+    .nav-list{
+        display: -webkit-box;
+        padding: 10px 0;
+        li{
+            -webkit-box-flex:1;
+            text-align: center;
+            border-right: 1px solid #fff;
+            max-width: 60%;
+            &:last-child{
+                border-right:none;
+            }
+            color:#fff;
+            font-weight:bold;
+            span{
+                @include arrow(45deg);
+                display: inline-block;
+                position: relative;
+                left: 5px;
+                top: -2px;
+            }
+        }
+    }
+    .category-panel{
+    	display: none;
+        position: absolute;
+        z-index: 99;
+        width: 100%;
+        .category-list{
+            @include scrollable;
+            float: left;
+            width: 40%;
+            background: #61cba0;
+            li{
+                height: 43px;
+                line-height: 43px;
+                color: #fff;
+                border-top: 1px solid #6bdfb0;
+                padding-left: 15px;
+                padding-right: 10px;
+                span{
+                    float: right;
+                    display: none;
+                    @include arrow(-45deg);
+                    position: relative;
+                    top: 18px;
+                }
+                &.cur{
+                    background: #47c693;
+                    span{
+                        display: block;
+                    }
+                }
+            }
+        }
+        .sub-category-list{
+            @include scrollable;
+            width: 60%;
+            background: #47c693;
+            ul{
+                display: none;
+                &.cur{
+                    display: block;
+                }
+                li{
+                    height: 43px;
+                    line-height: 43px;
+                    padding-left: 15px;
+                    a{
+                        color: #fff;
+                    }
+                    border-top: 1px solid #63cfa3;
+                    &:first-child{
+                        border-top: 1px solid #6bdfb0;
+                    }
+                }
+            }
+        }
+    }
+    .order-panel{
+        display: none;
+        position: absolute;
+        z-index: 99;
+        width: 100%;
+        background: #61cba0;
+        a{
+            display: block;
+            text-align: center;
+            height: 43px;
+            line-height: 43px;
+            color: #fff;
+            border-top: 1px solid #6bdfb0;
+        }
+    }
+    
+}
+
+.product-list{
+	padding: 0 15px;
+	li{
+		position: relative;
+		padding: 15px 0;
+		border-bottom: 1px solid #eae8e4;
+        &:last-child{
+            border-bottom:none;
+        }
+		.img{
+			float: left;
+			width: 74px;
+			height: 74px;
+			border: 1px solid #eae8e4;
+            background-repeat: no-repeat;
+            background-position: center center;
+            -webkit-background-size:cover;
+            background-size: cover;
+		}
+		.info{
+			margin-left: 10px;
+			float: left;
+			width: 150px;
+			.name{
+				color: #333;
+				line-height: 22px;
+				margin-bottom: 5px;
+			}
+            .sales{
+                margin-top: 5px;
+                font-size: 14px;
+                color: #666;
+            }
+		}
+		.add-cart-big{
+			float: right;
+			position: relative;
+			top: 23px;
+		}
+		.new-tag{
+			background: #aecc42;
+			color: #fff;
+			height: 14px;
+			line-height: 14px;
+			position: absolute;
+			top: 15px;
+			right: -15px;
+			font-size: 12px;
+			padding-right: 3px;
+			i{
+				display: inline-block;
+				vertical-align: top;
+				border-left: 7px solid #faf9f5;
+				border-top: 7px solid transparent;
+				border-bottom: 7px solid transparent;
+			}
+		}
+	}
+}
+.empty{
+    color: #666;
+    font-size: 16px;
+    text-align: center;
+    margin: 80px 0 50px;
+    a{
+        width: 180px;
+        height: 40px;
+        line-height: 40px;
+        margin: 0 auto;
+        background: #61cba0;
+        -webkit-border-radius: 12px;
+        border-radius: 12px;
+        color: #fff;
+        text-align: center;
+        margin-top: 10px;
+        display: block;
+    }
+}

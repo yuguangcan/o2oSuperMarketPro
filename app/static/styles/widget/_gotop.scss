@@ -1,0 +1,31 @@
+.common-gotop{
+	margin-top: 20px;
+	border: 1px solid #ecebe7;
+	height: 58px;
+	line-height: 58px;
+	font-size: 12px;
+	padding: 0 15px;
+	text-align: center;
+	p{
+		color: #333;
+		display: inline-block;
+		max-width: 50%;
+		line-height: 22px;
+		vertical-align: middle;
+		overflow: hidden;
+	}
+	i{
+		display: inline-block;
+		margin-right: 3px;
+		vertical-align: middle;
+	}
+	.switch{
+		color: #3399cc;
+		display: inline-block;
+		margin: 0 10px 0 5px;
+	}
+	.gotop{
+		display: inline-block;
+		color: #3399cc;
+	}
+}

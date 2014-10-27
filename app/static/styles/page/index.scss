@@ -1,0 +1,102 @@
+.category{
+    height: 38px;
+    padding-left:17px;
+    background: #61cba0;
+    overflow:hidden;
+    overflow-x:scroll;
+    -webkit-overflow-scrolling : touch;
+    ul{
+        position: relative;
+        white-space:nowrap;
+    }
+    li{
+        display: inline-block;
+        color: #e4f0ed;
+        padding: 10px 7px;
+        margin-right: 5px;
+        text-align: center;
+        position: relative;
+        height: 38px;
+        overflow: hidden;
+        -webkit-box-sizing:border-box;
+        box-sizing: border-box;
+        div{
+            width: 9px;
+            height: 9px;
+            background: #faf9f5;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            margin-left: -5px;
+            -webkit-transform:rotate(45deg);
+            transform:rotate(45deg);
+            display: none;
+        }
+        &.cur{
+            font-weight: bold;
+            color:#fff;
+            div{
+                display: block;
+            }
+        }
+    }
+}
+.activity{
+    display: none;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    margin: 15px 15px 0;
+    padding-bottom: 44.8%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+.category-list{
+    ul{
+        padding: 15px 15px;
+        li{
+            padding: 15px 15px;
+            border-bottom: 1px solid #e7ece0;
+            &:last-child{
+                border-bottom: none;
+            }
+            a{
+                display: -webkit-box;
+                -webkit-box-align: center;
+            }
+            .img{
+                width: 74px;
+                height: 74px;
+            }
+            .info{
+                margin-left: 10px;
+                -webkit-box-flex:1;
+                .name{
+                    color: #333;
+                    line-height: 22px;
+                    margin-bottom: 5px;
+                }
+                .sub{
+                    color: #666666;
+                }
+            }
+
+        }
+    }
+}
+.swipe {
+    overflow: hidden;
+    visibility: hidden;
+    position: relative;
+}
+.swipe-wrap {
+    overflow: hidden;
+    position: relative;
+}
+.swipe-wrap > ul,  .swipe-wrap.activity-list a{
+    float:left;
+    width:100%;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    position: relative;
+}

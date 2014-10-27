@@ -1,0 +1,29 @@
+/*div class="price">
+    ￥6.2<span class="old-price">￥5.2</span>
+</div>*/
+
+.price-label-big{
+	color: #61cba0;
+	font-weight: bold;
+	font-size: 24px;
+	.old-price{
+		margin-left: 5px;
+		font-size: 14px;
+		color: #999;
+		text-decoration: line-through;
+		font-weight: normal;
+	}
+}
+
+.price-label-small{
+	color: #61cba0;
+	font-weight: bold;
+	font-size: 16px;
+	.old-price{
+		margin-left: 3px;
+		font-size: 12px;
+		color: #999;
+		text-decoration: line-through;
+		font-weight: normal;
+	}
+}

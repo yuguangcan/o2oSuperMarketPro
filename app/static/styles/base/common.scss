@@ -1,0 +1,38 @@
+@import 'reset';
+
+@import '../widget/icon';
+@import '../widget/header';
+@import '../widget/footer';
+@import '../widget/cart';
+@import '../widget/titlebar';
+@import '../widget/usericon';
+@import '../widget/button';
+@import '../widget/gotop';
+
+@import '../widget/add-cart';
+@import '../widget/price-label';
+
+body{
+	background:#faf9f5;
+}
+
+.clearfix:after{
+    content:'';
+    clear:both;
+    overflow:hidden;
+    height:0; 
+    display:block; 
+}
+html,a,input,textarea,.notapcolor{
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+.hide{
+	display: none;
+}
+.load-more{
+	margin: 10px 0;
+	text-align: center;
+	color: #61cba0;
+}
+

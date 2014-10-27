@@ -1,0 +1,17 @@
+.common-titlebar{
+	height: 44px;
+	background: #61cba0;
+	position: relative;
+	.title{
+		text-align: center;
+		font-size: 18px;
+		font-weight: 700;
+		color: #fff;
+		line-height: 44px;
+	}
+	.icon-arrow-left{
+		position: absolute;
+		left:20px;
+		top: 12px;
+	}
+}

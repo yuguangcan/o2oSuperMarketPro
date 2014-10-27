@@ -1,0 +1,137 @@
+.operation{
+	padding: 12px 15px;
+	#selectall{
+		float: left;
+	}
+	label{
+		position: relative;
+		top:2px;
+	}
+	#delete{
+		float: right;
+		height: 22px;
+		font-size: 14px;
+	}
+}
+.product-list{
+	padding: 0 15px 44px;
+	li{
+		padding: 15px 0;
+		border-bottom: 1px solid #e7ece0;
+		&:last-child{
+			border-bottom: none;
+		}
+	}
+	.select{
+		width: 20px;
+		height: 20px;
+		position: relative;
+		top: 31px;
+		float: left;
+	}
+	.product{
+		display: -webkit-box;
+		margin-left: 5px;
+		.img{
+			img{
+				width: 75px;
+				height: 75px;
+				border: 1px solid #eae8e4;
+			}
+		}
+		.info{
+			margin-left: 10px;
+			-webkit-box-flex: 1;
+			.name{
+				color: #333;
+				margin-bottom: 8px;
+				-webkit-line-clamp: 2;
+				overflow:hidden;
+				display: block;
+				margin-bottom: 5px;
+			}
+			.price{
+				font-size: 14px;
+				text-align: right;
+				.old-price{
+					color: #999;
+					text-decoration: line-through;
+				}
+				.current-price{
+					margin:0 3px;
+					color: #61cba0;
+				}
+			}
+			.product-count{
+				width: 37px;
+				height: 33px;
+				border: 1px solid #c9c7c4;
+				text-align: center;
+				font-size: 16px;
+				margin-left: 5px;
+				&::-webkit-inner-spin-button {
+				     -webkit-appearance: none;
+				}
+			}
+		}
+		
+	}
+}
+.total{
+	background: #fffffe;
+	width: 100%;
+	height: 44px;
+	font-size: 16px;
+	overflow: hidden;
+	position: fixed;
+	bottom: 0;
+	em{
+		font-style: normal;
+	}
+	p{
+		position: absolute;
+		left: 0;
+		width: 55%;
+		height: 44px;
+		margin-left: 10px;
+		display: -webkit-box;
+		-webkit-box-align: center;
+		color: #666;
+		em{
+			color: #d02626;
+		}
+	}
+	button{
+		position: absolute;
+		right: 16px;
+		top: 7px;
+		background: #e8826b;
+		color: #fff;
+		height: 30px;
+		line-height: 30px;
+		padding: 0 20px;
+		border: 0;
+		font-size: 16px;
+		-webkit-border-radius: 30px 30px;
+		border-radius: 30px 30px;
+	}
+}
+.empty{
+	color: #666;
+	font-size: 16px;
+	text-align: center;
+	margin: 80px 0 50px;
+	a{
+		width: 180px;
+		height: 40px;
+		line-height: 40px;
+		margin: 0 auto;
+		background: #61cba0;
+		-webkit-border-radius: 12px;
+		border-radius: 12px;
+		color: #fff;
+		text-align: center;
+		margin-top: 10px;
+		display: block;
+	}
+}

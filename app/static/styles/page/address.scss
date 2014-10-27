@@ -1,0 +1,125 @@
+.address-input{
+	margin: 10px 10px;
+	height: 42px;
+	line-height: 42px;
+	color: #666;
+	font-size: 16px;
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	label{
+		width: 70px;
+		text-align: justify;
+		display: inline-block;
+	}
+	input{
+		width: 220px;
+		height: 40px;
+		border:1px solid #61cba0;
+		-webkit-border-radius:3px;
+		border-radius: 3px;
+		padding: 3px 10px;
+		-webkit-box-sizing:border-box;
+		box-sizing:border-box;
+		font-size: 16px;
+	}
+	.select-wrap{
+		position: relative;
+		width: 220px;
+		&:after{
+			content: "";
+			top: 14px;
+			right: 7px;
+			position: absolute;
+			display: inline-block;
+			font-size: 0;
+			border-top: 2px solid #61cba0;
+			border-left: 2px solid #61cba0;
+			width: 6px;
+			height: 6px;
+			background-color: transparent;
+			-webkit-transform: rotate(225deg);
+		}
+
+	}
+	select{
+		-webkit-appearance: none;
+		width: 220px;
+		height: 40px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+		border: solid 1px #61cba0;
+		padding: 3px 16px 3px 10px;
+		font-size: 16px;
+	}
+}
+.address-detail{
+	margin: 10px 10px;
+	height: 80px;
+	line-height: 80px;
+	color: #666;
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	label{
+		width: 70px;
+		text-align: justify;
+		display: inline-block;
+	}
+	.address-detail-textarea{
+		background: #fff;
+		width: 220px;
+		font-size: 16px;
+		height: 78px;
+		border:1px solid #61cba0;
+		-webkit-border-radius:3px;
+		border-radius: 3px;
+		padding: 3px 5px;
+		-webkit-box-sizing:border-box;
+		box-sizing:border-box;
+		line-height: 22px;
+		overflow: auto;
+	}
+	textarea{
+		vertical-align: middle;
+		outline: none;
+		resize:none;
+		font-size: 16px;
+		color: #666;
+		display: block;
+		width: 100%;
+	}
+}
+.address-set-default{
+	margin: 10px 10px;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+	label{
+		color: #666;
+	}
+}
+.set-default{
+	position: relative;
+	top: -2px;
+}
+.submit-btn{
+	margin: 15px auto;
+	text-align: center;
+	button{
+		display: inline-block;
+		border:none;
+		padding: 0 20px;
+		font-size: 18px;
+		height: 40px;
+		line-height: 40px;
+		margin-right: 15px;
+		background: #61cba0;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+		color: #fff;
+		text-align: center;
+		&.delete{
+			background: #fff;
+			color: #666;
+		}
+	}
+}

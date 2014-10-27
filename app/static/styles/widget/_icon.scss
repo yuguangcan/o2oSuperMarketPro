@@ -1,0 +1,38 @@
+@import '../sass/retina-sprite-mixin';
+
+$icon-retina: sprite-map("icons/*.png");
+
+.icon-user{
+ 	@include retina-sprite-background(user,$icon-retina);
+}
+.icon-search{
+	@include retina-sprite-background(search,$icon-retina);
+	background-position: 0 -92px;
+}
+.icon-cart{
+	@include retina-sprite-background(cart,$icon-retina);
+}
+.icon-add-cart-big{
+	@include retina-sprite-background(add-cart-big,$icon-retina);
+}
+.icon-add-cart-small{
+	@include retina-sprite-background(add-cart-small,$icon-retina);
+}
+.icon-arrow-left{
+	@include retina-sprite-background(arrow-left,$icon-retina);
+}
+.icon-unstar{
+	@include retina-sprite-background(unstar,$icon-retina);
+}
+.icon-star{
+	@include retina-sprite-background(star,$icon-retina);
+}
+.icon-gotop{
+	@include retina-sprite-background(gotop,$icon-retina);
+}
+.icon-switch{
+	@include retina-sprite-background(switch,$icon-retina);
+}
+
+
+

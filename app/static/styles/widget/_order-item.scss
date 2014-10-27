@@ -1,0 +1,130 @@
+.order-item{
+	border: 1px solid #f3f2ee;
+	-webkit-border-radis:3px 3px;
+	border-radius: 3px 3px;
+	margin: 15px 15px;
+	padding: 10px 10px;
+	background: #fff;
+	font-size: 14px;
+	.cancel-btn{
+		border: 1px solid #999;
+		-webkit-border-radius:12px 12px;
+		border-radius: 12px 12px;
+		color: #999;
+		padding: 4px 10px;
+		background: #f3f3f3;
+	}
+	.submit-btn{
+		border: 1px solid #61cba0;
+		-webkit-border-radius:12px 12px;
+		border-radius: 12px 12px;
+		color: #61cba0;
+		padding: 4px 10px;
+		background: #fff;
+	}
+	.process-title{
+		padding-bottom: 5px;
+		border-bottom:1px solid #edece8;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		.processing{
+			color: #f60000;
+		}
+		.canceled{
+			color: #333;
+		}
+		ul{
+			display: inline-block;
+			li{
+				display: inline-block;
+				height: 18px;
+				width: 18px;
+				position: relative;
+				top: 3px;
+			}
+		}
+		.rank-submit{
+			float: right;
+			position: relative;
+			top: 2px;
+		}
+	}
+	.info{
+		margin-top: 5px;
+		color: #333;
+		p{
+			line-height: 22px;
+		}
+		.title{
+			margin-bottom: 5px;
+			p{
+				margin-right: 80px;
+			}
+		}
+		.cancel-btn,.submit-btn{
+			float: right;
+		}
+		.detail{
+			.product-list{
+				height: 140px;
+				overflow:hidden;
+				margin: 5px 0;
+				li{
+					display: inline-block;
+					margin-right: 4px;
+					margin-bottom: 5px;
+					width: 85px;
+					img{
+						width: 83px;
+						height: 83px;
+						border: 1px solid #ebe8e9;
+					}
+					.product-name{
+						height: 20px;
+						line-height: 20px;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+					}	
+					div{
+						color: #666;
+					}
+				}
+			}
+		}
+		.other{
+			display: none;
+			p{
+				display: -webkit-box;
+				.other-info{
+					-webkit-box-flex:1;
+					display: block;
+				}
+			}
+		}
+	}
+	.more{
+		text-align: center;
+		color: #999;
+		height: 22px;
+		line-height: 22px;
+		span{
+			width: 6px;
+			height: 6px;
+			border-bottom: 1px solid #999;
+			border-right: 1px solid #999;
+			-webkit-transform: rotate(45deg);
+			display: inline-block;
+			margin-left: 5px;
+			position: relative;
+			top: -3px;
+		}
+		&.expand{
+			span{
+				-webkit-transform: rotate(225deg);
+				top: 0px;
+			}
+		}
+	}
+}

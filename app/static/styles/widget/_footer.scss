@@ -1,0 +1,23 @@
+.common-footer{
+	height:55px;
+	padding-top: 20px;
+	text-align:center;
+	font-size: 14px;
+	ul{
+		color:#6f6f6f;
+		li{
+			height:22px;
+			line-height:22px;
+			display:inline-block;
+			margin-right:10px;
+			a{
+				color:#6f6f6f;
+				text-decoration: none;
+			}
+		}
+	}
+	div{
+		color:#d0cfce;
+		margin: 10px 0 20px;
+	}
+}
