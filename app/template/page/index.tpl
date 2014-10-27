@@ -28,6 +28,9 @@
         <div class="activity-list swipe-wrap">
 
         </div>
+        <ul id="slider-position" class="activity-list-pointer">
+            
+        </ul>
     </div>
     <div id='category-slider' class='swipe'>
         <div class="category-list swipe-wrap">

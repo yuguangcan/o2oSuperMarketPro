@@ -1,16 +1,42 @@
 require(['zepto','common','swipe'], function( $ ,common,Swipe ) {
 	$(function(){
-		var activityList = $('.activity-list');
+		var activityList = $('.activity-list'),
+			positionList = $('#slider-position');
 		$.get('/shop/ajax/getactivity',function(res){
 			var data = JSON.parse(res);
 			if(data && data.errno == 0){
 				var imgList = data.data;
 				for(var i=0;i<imgList.length;i++){
-					$('<a href="'+imgList[i].url+'" class="activity" style="background-image:url('+imgList[i].img+')"').appendTo(activityList);
+					var div = $('<div></div>');
+					$('<a class="activity"></a>').css({
+						'background-image': 'url('+imgList[i].img + ')'
+					}).attr('href',imgList[i].url).appendTo(div);
+					div.appendTo(activityList);
+					positionList.append(i==0?'<li class="on"></li>':'<li></li>');
 				}
+				var bullets = positionList.find('li');
 				new Swipe(document.getElementById('activity-slider'), {
 					auto: 3000,
-            		continuous: true
+            		continuous: true,
+            		callback: function(pos) {
+
+            		  var i = bullets.length;
+            		  
+            		  if( i == 2 ){
+            		    if(pos == 1||pos == 3){
+            		        bullets[0].className = ' ';
+            		        bullets[1].className = 'on';
+            		    }else{
+            		        bullets[1].className = ' ';
+            		        bullets[0].className = 'on';
+            		    }
+            		  }else{
+            		    while (i--) {
+            		        bullets[i].className = ' ';
+            		    }
+            		    bullets[pos].className = 'on';
+            		  }
+            		}
             	});
 			}
 		});
