@@ -142,6 +142,15 @@ requirejs.config({
                 'zepto-module',
                 'common'
             ]
+        },
+        {
+            name: 'page/initaddress',
+            exclude: [
+                'requirelib',
+                'zepto',
+                'zepto-module',
+                'common'
+            ]
         }
 
 
