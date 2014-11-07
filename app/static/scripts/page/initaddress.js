@@ -41,12 +41,10 @@ require(['zepto','common'], function( $ ,common ) {
 				return;
 			}
 			var data = {
-				city:city.val(),
-				district:district.val(),
 				community:community.val()
 			};
 
-			$.post('/shop/addresscommit',data,function(response){
+			$.post('/shop/ajax/bindcommunity',data,function(response){
 				var data = JSON.parse(response);
 				if(data && data.errno == 0){
 					window.location.href = '/shop/home';
