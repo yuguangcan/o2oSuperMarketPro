@@ -36,7 +36,7 @@ require(['zepto','common','widget/cart','widget/titlebar'], function( $ ,common 
 		});
 
 		$('.add-cart').on('click',function(e){
-			if(isNaN(productCount.val()) || productCount.val()-0 < 0){
+			if(isNaN(productCount.val()) || productCount.val()-0 <= 0){
 				return "请输入购买数量";
 			}
 			if(productCount.val()-0 > productCount.attr('max')){

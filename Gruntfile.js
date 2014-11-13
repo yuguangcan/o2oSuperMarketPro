@@ -81,7 +81,7 @@ module.exports = function (grunt) {
         requirejs: {
             dist: {
                 options: {
-                    optimize: 'none',
+                    optimize: 'uglify',
                     preserveLicenseComments: false,
                     generateSourceMaps: false,
                     removeCombined: true,

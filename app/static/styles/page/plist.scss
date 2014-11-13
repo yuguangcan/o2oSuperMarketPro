@@ -12,7 +12,7 @@
     -webkit-transform: rotate($value);
 }
 .navbar{
-    background: #61cba0;
+    background: #f16929;
     position: relative;
     .nav-list{
         display: -webkit-box;
@@ -45,12 +45,12 @@
             @include scrollable;
             float: left;
             width: 40%;
-            background: #61cba0;
+            background: #f16929;
             li{
                 height: 43px;
                 line-height: 43px;
                 color: #fff;
-                border-top: 1px solid #6bdfb0;
+                border-top: 1px solid rgba(255,255,255,0.3);
                 padding-left: 15px;
                 padding-right: 10px;
                 span{
@@ -61,7 +61,7 @@
                     top: 18px;
                 }
                 &.cur{
-                    background: #47c693;
+                    background: #e17c2a;
                     span{
                         display: block;
                     }
@@ -71,7 +71,7 @@
         .sub-category-list{
             @include scrollable;
             width: 60%;
-            background: #47c693;
+            background: #ff9844;
             ul{
                 display: none;
                 &.cur{
@@ -84,9 +84,9 @@
                     a{
                         color: #fff;
                     }
-                    border-top: 1px solid #63cfa3;
+                    border-top: 1px solid rgba(255,255,255,0.3);
                     &:first-child{
-                        border-top: 1px solid #6bdfb0;
+                        border-top: 1px solid rgba(255,255,255,0.3);
                     }
                 }
             }
@@ -97,14 +97,14 @@
         position: absolute;
         z-index: 99;
         width: 100%;
-        background: #61cba0;
+        background: #f16929;
         a{
             display: block;
             text-align: center;
             height: 43px;
             line-height: 43px;
             color: #fff;
-            border-top: 1px solid #6bdfb0;
+            border-top: 1px solid rgba(255,255,255,0.3);
         }
     }
     
@@ -179,7 +179,7 @@
         height: 40px;
         line-height: 40px;
         margin: 0 auto;
-        background: #61cba0;
+        background: #f16929;
         -webkit-border-radius: 12px;
         border-radius: 12px;
         color: #fff;
