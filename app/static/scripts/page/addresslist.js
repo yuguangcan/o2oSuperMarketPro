@@ -16,13 +16,22 @@ require(['zepto','common','widget/titlebar'], function( $ ,common ,titlebar) {
 		});
 		$('.address-list .order-address-change').click(function(e){
 			e.preventDefault();
-			if(fr_url.indexOf('aid=')!=-1){
-				var url = replaceParamVal(fr_url,'aid',$(this).parent().data("aid"));
-			}else{
-				var url = fr_url + '&aid=' + $(this).parent().data("aid");
-			}
+			$.post('/shop/ajax/editaddress',{
+				'aid':$(this).parent().data("aid")
+			},function(resp){
+				if(resp && resp.errno == 0){
+					window.location.href = document.referrer;
+				}else{
+					alert('切换地址失败，请稍后再试');
+				}
+			});
+			// if(fr_url.indexOf('aid=')!=-1){
+			// 	var url = replaceParamVal(fr_url,'aid',$(this).parent().data("aid"));
+			// }else{
+			// 	var url = fr_url + '&aid=' + $(this).parent().data("aid");
+			// }
 			
-			window.location.href = url;
+			// window.location.href = url;
 		});
 	});
 	function replaceParamVal(url,paramName,replaceWith) {
