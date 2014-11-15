@@ -84,6 +84,9 @@ require(['zepto','common','widget/cart','widget/titlebar'], function( $ ,common 
 		});
 
 		$('#delete').click(function(){
+			if(!confirm('确认删除吗？')){
+				return;
+			}
 			$('.select').each(function(index,item){
 				if(item.checked){
 					cart.remove(item.value);
