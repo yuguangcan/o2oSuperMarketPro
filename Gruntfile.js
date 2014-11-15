@@ -44,7 +44,7 @@ module.exports = function (grunt) {
         compass: {
             options: {
                 sassDir: '<%= config.app %>/static/styles',
-                cssDir: '.tmp/static/<%= config.module %>/styles',
+                cssDir: '.tmp/static/styles',
                 generatedImagesDir: '.tmp/static/<%= config.module %>/images/generated',
                 imagesDir: '<%= config.app %>/static/images',
                 javascriptsDir: '<%= config.app %>/static/scripts',
@@ -79,6 +79,19 @@ module.exports = function (grunt) {
 
         //requirejs support
         requirejs: {
+            debug:{
+                options: {
+                    optimize: 'none',
+                    preserveLicenseComments: false,
+                    generateSourceMaps: false,
+                    removeCombined: true,
+                    useStrict: true,
+                    baseUrl: '<%= config.app %>/static/scripts',
+                    mainConfigFile: '<%= config.app %>/require-config.js',
+                    dir: '<%= config.dist %>/static/<%= config.module %>/scripts',
+                    keepBuildDir: true
+                }
+            },
             dist: {
                 options: {
                     optimize: 'uglify',
@@ -193,8 +206,7 @@ module.exports = function (grunt) {
                     cwd: '<%= config.app %>/static',
                     dest: '<%= config.dist %>/static/<%= config.module %>',
                     src: [
-                        'images/**/*.webp',
-                        'images/generated/*.*',
+                        'images/**/*.*'
                     ]
                 },
                 {
@@ -207,38 +219,42 @@ module.exports = function (grunt) {
                     ]
                 }]
             },
-            styles: {
-                expand: true,
-                dot: true,
-                cwd: '.tmp/static/<%= config.module %>/styles/',
-                dest: '<%= config.dist %>/static/<%= config.module %>/styles',
-                src: '**/*.css'
+            tmp : {
+                files:[{
+                    expand: true,
+                    dot: true,
+                    cwd: '.tmp/concat/static/',
+                    dest: '<%= config.dist %>/static/',
+                    src: [
+                        '**/*.css'
+                    ]
+                }]
             }
-        },
-
-        // Run some tasks in parallel to speed up build process
-        concurrent: {
-            dist: [
-                'compass',
-                'imagemin',
-                'svgmin'
-            ]
         }
     });
 
     grunt.registerTask('build', [
         'clean:dist',
-        'useminPrepare',
         'compass',
-        'copy:styles',
+        'copy:dist',
+        'useminPrepare',
         'concat',
         'cssmin',
         'requirejs:dist',
-        'copy:dist',
         'rev',
         'usemin'
         ]);
 
+    grunt.registerTask('debug', [
+        'clean:dist',
+        'compass',
+        'copy:dist',
+        'useminPrepare',
+        'concat',
+        'copy:tmp',
+        'requirejs:debug',
+        'usemin'
+        ]);
 
     grunt.registerTask('default', [
         'build'
