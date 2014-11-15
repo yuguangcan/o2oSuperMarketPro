@@ -97,8 +97,7 @@
     	<div class="address-detail">
     		<label>详细地址</label>
             <div class="address-detail-textarea">
-                <div class="address-detail-prefix"></div>
-                <textarea name="name" id="detail">{%$address.detail%}</textarea>
+                <textarea name="name" id="detail" placeholder="请输入房间号">{%$address.detail%}</textarea>
             </div>
     	</div>
         <div class="address-set-default">
