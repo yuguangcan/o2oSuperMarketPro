@@ -82,15 +82,13 @@
             <label>幢/座/楼</label>
             <div class="select-wrap">
                 <select id="unit">
-                    {%if $address.unit%}
-                        {%foreach $unit as $item%}
-                            {%if $address.unit == $item.unit%}
-                                <option value="{%$address.unit%}" checked="checked">{%$address.unit%}</option>
-                            {%else%}
-                                <option value="{%$item.unit%}">{%$item.unit%}</option>
-                            {%/if%}
-                        {%/foreach%}
-                    {%/if%}
+                    {%foreach $unit as $item%}
+                        {%if $address.unit == $item.unit%}
+                            <option value="{%$address.unit%}" checked="checked">{%$address.unit%}</option>
+                        {%else%}
+                            <option value="{%$item.unit%}">{%$item.unit%}</option>
+                        {%/if%}
+                    {%/foreach%}
                 </select>
             </div>
         </div>
